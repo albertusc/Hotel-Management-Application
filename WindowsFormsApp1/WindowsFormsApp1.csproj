@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAB25269-A5DD-4D5E-85B8-B45D5C9785DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrasi\PengDK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrasi\PengDK.Designer.cs">
+      <DependentUpon>PengDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrasi\SisPeng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrasi\SisPeng.Designer.cs">
+      <DependentUpon>SisPeng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cpesan.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Housekeeping\InptDatBrngKeber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Housekeeping\InptDatBrngKeber.Designer.cs">
+      <DependentUpon>InptDatBrngKeber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Housekeeping\KetersediaanKebersihan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Housekeeping\KetersediaanKebersihan.Designer.cs">
+      <DependentUpon>KetersediaanKebersihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\PemStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\PemStok.Designer.cs">
+      <DependentUpon>PemStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resepsionis\DataReservUnsort.cs">
+      <DependentUpon>DataReservUnsort.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resepsionis\DataReserv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataReserv.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resepsionis\FormDataReserv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resepsionis\FormDataReserv.Designer.cs">
+      <DependentUpon>FormDataReserv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resepsionis\FormDataReservUnsort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resepsionis\FormDataReservUnsort.Designer.cs">
+      <DependentUpon>FormDataReservUnsort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resepsionis\GuestR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resepsionis\GuestR.Designer.cs">
+      <DependentUpon>GuestR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resepsionis\GuestCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resepsionis\GuestCheckout.Designer.cs">
+      <DependentUpon>GuestCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InvBrng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InvBrng.Designer.cs">
+      <DependentUpon>InvBrng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resepsionis\GuestPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resepsionis\GuestPay.Designer.cs">
+      <DependentUpon>GuestPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resepsionis\RoomReserv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resepsionis\RoomReserv.Designer.cs">
+      <DependentUpon>RoomReserv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisProjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VisProjectDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisProjectDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VisProjectDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisProjectDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VisProjectDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisProjectDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VisProjectDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisProjectDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VisProjectDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisProjectDataSet5.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administrasi\PengDK.resx">
+      <DependentUpon>PengDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrasi\SisPeng.resx">
+      <DependentUpon>SisPeng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Housekeeping\KetersediaanKebersihan.resx">
+      <DependentUpon>KetersediaanKebersihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Housekeeping\InptDatBrngKeber.resx">
+      <DependentUpon>InptDatBrngKeber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InvBrng.resx">
+      <DependentUpon>InvBrng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\PemStok.resx">
+      <DependentUpon>PemStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resepsionis\DataReservUnsort.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DataReservUnsort.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resepsionis\DataReserv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DataReserv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resepsionis\FormDataReserv.resx">
+      <DependentUpon>FormDataReserv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resepsionis\FormDataReservUnsort.resx">
+      <DependentUpon>FormDataReservUnsort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resepsionis\GuestCheckout.resx">
+      <DependentUpon>GuestCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resepsionis\GuestPay.resx">
+      <DependentUpon>GuestPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resepsionis\GuestR.resx">
+      <DependentUpon>GuestR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resepsionis\RoomReserv.resx">
+      <DependentUpon>RoomReserv.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VisProjectDataSet.xsc">
+      <DependentUpon>VisProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VisProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VisProjectDataSet.xss">
+      <DependentUpon>VisProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet1.xsc">
+      <DependentUpon>VisProjectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VisProjectDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VisProjectDataSet1.xss">
+      <DependentUpon>VisProjectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet2.xsc">
+      <DependentUpon>VisProjectDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VisProjectDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VisProjectDataSet2.xss">
+      <DependentUpon>VisProjectDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet3.xsc">
+      <DependentUpon>VisProjectDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VisProjectDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VisProjectDataSet3.xss">
+      <DependentUpon>VisProjectDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet4.xsc">
+      <DependentUpon>VisProjectDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VisProjectDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VisProjectDataSet4.xss">
+      <DependentUpon>VisProjectDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet5.xsc">
+      <DependentUpon>VisProjectDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="VisProjectDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VisProjectDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VisProjectDataSet5.xss">
+      <DependentUpon>VisProjectDataSet5.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

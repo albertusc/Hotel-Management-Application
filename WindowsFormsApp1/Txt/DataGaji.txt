@@ -1,0 +1,8 @@
+ID Karyawan: 1
+Nama: Admin
+Jabatan: Administrasi
+Gaji Pokok: 5000000
+Tunjangan: 1000000
+Potongan: 100000
+Total Gaji: 5900000
+------------------------------

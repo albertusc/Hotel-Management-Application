@@ -1,0 +1,12 @@
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.cache
+*.pdb
+
+# Local database and machine-specific artifacts
+*.mdf
+*.ldf
+*.log
