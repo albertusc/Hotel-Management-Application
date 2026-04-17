@@ -46,6 +46,7 @@ This repository contains a C# Windows Forms application for hotel operations, co
 
 The following screenshots are included under `Images/`:
 
+- ![Diagtam](Images/Diagram.png)
 - ![Login Page](Images/Login%20Page.png)
 - ![Home Page](Images/Home%20Page.png)
 - ![Home Menus](Images/Home%20Menus.png)
